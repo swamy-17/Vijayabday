@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Vijaya 🎉</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff4081;
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    p {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #e73370;
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: red;
+      animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container animate__animated animate__bounceIn">
+    <h1>🎂 Happy Birthday Vijaya! 🎉</h1>
+    <img src="
+    https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg" alt="Birthday Cake">
+    <p>Wishing you a day filled with love, joy, and magical memories! 💖</p>
+    <button id="surprise">🎁 Open Surprise</button>
+    <button id="dance">🕺 Let's Dance</button>
+  </div><audio id="birthdaySong" src=""></audio>
+
+  <script>
+    $(document).ready(function() {
+      $('#surprise').click(function() {
+        $('.container').addClass('animate__heartBeat');
+        $('#birthdaySong')[0].play();
+        showConfetti();
+        setTimeout(() => $('.container').removeClass('animate__heartBeat'), 1000);
+      });
+
+      $('#dance').click(function() {
+        $('body').addClass('animate__animated animate__jello');
+        setTimeout(() => $('body').removeClass('animate__jello'), 1000);
+      });
+
+      function showConfetti() {
+        for (let i = 0; i < 30; i++) {
+          let confetti = $('<div class="confetti"></div>');
+          confetti.css({
+            top: Math.random() * 100 + 'px',
+            left: Math.random() * window.innerWidth + 'px',
+            backgroundColor: '#' + Math.floor(Math.random()*16777215).toString(16)
+          });
+          $('body').append(confetti);
+          setTimeout(() => confetti.remove(), 3000);
+        }
+      }
+    });
+  </script></body>
+</html>
