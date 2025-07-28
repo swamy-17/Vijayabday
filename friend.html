@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Friendship Forever - Vijaya & Naidu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: #fff;
+      background: radial-gradient(circle, #0f0f0f 0%, #1a1a1a 100%);
+      overflow-x: hidden;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 20px;
+      border: 2px solid #ff6600;
+      box-shadow: 0 0 25px rgba(255, 102, 0, 0.4);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .quote {
+      font-size: 1.3rem;
+      color: #ffc107;
+      font-weight: bold;
+      margin: 20px 0;
+      font-family: 'Orbitron', sans-serif;
+      animation: pulseText 3s infinite;
+    }
+
+    .friend-btn {
+      background: #ff6600;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .friend-btn:hover {
+      background: #e65100;
+      transform: scale(1.1);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #ff6600;
+      font-size: 1rem;
+      transition: 0.3s ease-in-out;
+    }
+     #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .back-link:hover {
+      color: #ffc107;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseText {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); color: #ffcc00; }
+    }
+
+    @media(max-width: 768px) {
+      h2 { font-size: 1.8rem; }
+      p, .quote { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+  <div class="card animate__animated animate__zoomIn">
+    <h2>A True Journey!!!🧡</h2>
+    <p>Dear Vijaya,<br><br>
+      It all started 5 years ago... just two souls who crossed paths and clicked instantly.<br><br>
+      From silly jokes to late-night chats, from school vibes to life goals, we've grown together with every laugh and every lesson. 🎯<br><br>
+      You've been my biggest support, my smile in rough days, and my best buddy who knows me inside out. And trust me, this bond is forever! 🫶<br><br>
+      Here's to more memories, more madness, and more moments that make our friendship unforgettable! 💥
+      You’ve been more than a friend — you’ve been a sister, a supporter, and someone I’ll always respect and care for. Through every up and down, we’ve stood strong together. 🧡
+    </p>
+    </p>
+
+    <div class="quote">"True friendship isn’t about being inseparable… it's about being separated and nothing changes." 💫</div>
+
+    <button class="friend-btn animate__animated animate__pulse">Frienship Forever!!!</button>
+    <br>
+    <a href="index.html" class="back-link">⬅ Back to Birthday Page</a>
+  </div>
+    <script>
+       $(document).ready(function() {
+      $('.friend-btn').click(function() {
+        alert('Here’s to many more years of friendship, Vijaya! 🥳');
+      });
+    });
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 70 },
+        color: { value: "#ff9800" },
+        shape: { type: "circle" },
+        opacity: { value: 0.6 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1.5 }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      },
+      retina_detect: true
+    });
+    </script>
+</body>
+</html>
